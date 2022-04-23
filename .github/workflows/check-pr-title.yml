@@ -1,7 +1,11 @@
 name: Check PR Title
 on:
-  pull_request:
-    types: [opened, edited, synchronize, reopened]
+    workflow_dispatch:
+     inputs:
+      version:
+        description: Bump Version
+        default: v1.0.0
+        required: true 
 jobs:
   check:
     name: Check PR Title
